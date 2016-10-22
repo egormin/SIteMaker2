@@ -79,6 +79,8 @@ namespace Site_Maker_2
         {
             Configuration inst_Configuration = new Configuration();
             inst_Configuration.meth_Configuration();
+
+            Configuration_XML inst_Configuration_XML = new Configuration_XML();
         }
     }
 }
