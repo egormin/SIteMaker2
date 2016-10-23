@@ -15,10 +15,22 @@ namespace Site_Maker_2
         public Form2()
         {
             InitializeComponent();
+            LoadDataFromConfig inst_LoadDataFromConfig = new LoadDataFromConfig();
+            string pathes = inst_LoadDataFromConfig.meth_LoadDataFromConfig();
+            string[] pathes_array = pathes.Split('#');
+            textBox1.Text = pathes_array[0];
+            textBox1.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            textBox2.Text = pathes_array[1];
+            textBox2.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            textBox3.Text = pathes_array[2];
+            textBox3.ForeColor = System.Drawing.SystemColors.WindowFrame;
         }
 
         private void Checking_Procession(int value)
-        {
+        {         
+
+          
+
             List<CheckBox> CB_list = new List<CheckBox>();
             CB_list.Add(checkBox1);
             CB_list.Add(checkBox2);
@@ -77,6 +89,8 @@ private void frm2_button_Save_Click(object sender, EventArgs e)
         {
             Configuration_XML inst_Configuration_XML = new Configuration_XML();
             inst_Configuration_XML.meth_Configuration_XML(textBox1.Text,textBox2.Text,textBox3.Text);
+            MessageBox.Show("Данные сохранены успешно");
+            Close();
         }
     }
 }

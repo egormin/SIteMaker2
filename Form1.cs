@@ -12,24 +12,49 @@ namespace Site_Maker_2
 {
     public partial class Form1 : Form
     {
-     
+        public string[] pathes_array;
         public Form1()
         {
             InitializeComponent();
+            if (!System.IO.File.Exists("configuration.xml"))
+            {
+                //button_Settings.PerformClick();
+
+                //MessageBox.Show("Не создан файл конфигурации, необходимо его создать", "Внимание!");
+
+            }
+
+
+           
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        //Проверка наличия конфигурационного файла
+        private void Form1_Load(object sender, EventArgs e)
         {
+            if (!System.IO.File.Exists("configuration.xml"))
+            {
+                MessageBox.Show("Не создан файл конфигурации, необходимо его создать", "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                button_Settings.PerformClick();
+            }
+            //else
+            //{
+               
+            //}
+        }
+
+      
+
+        private void button2_Click(object sender, EventArgs e)
+        {           
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Filter = "MS Word 2003 (*.doc)|*.doc|MS Word 2007 (*.docx)|*.docx";
             dialog.Title = "Выберите документ для загрузки данных";
-
+ 
             if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 radioButton_allNew.Visible = true;
                 radioButton_selectNumbers.Visible = true;
-                label_sumOfNewItems.Visible = true;
-
+                label_sumOfNewItems.Visible = true;        
 
                 label_path.Text = dialog.FileName;
                 label_path.Visible = true;
@@ -79,8 +104,17 @@ namespace Site_Maker_2
         {
             Configuration inst_Configuration = new Configuration();
             inst_Configuration.meth_Configuration();
-
             Configuration_XML inst_Configuration_XML = new Configuration_XML();
+        }
+
+        private void button_CreateCode_Click(object sender, EventArgs e)
+        {
+
+            if (label_WhatIsIt.Text == "Конверты")
+            {
+                EnvelopesCodeCreation inst_EnvelopesCodeCreation = new EnvelopesCodeCreation();
+                inst_EnvelopesCodeCreation.meth_EnvelopesCodeCreation();
+            }
         }
     }
 }

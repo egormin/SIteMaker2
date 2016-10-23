@@ -30,7 +30,6 @@
         {
             this.frm2_label_text_Header = new System.Windows.Forms.Label();
             this.frm2_label_text_ShowPathForEnvelops = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -41,6 +40,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.frm2_button_Save = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -66,16 +66,6 @@
             this.frm2_label_text_ShowPathForEnvelops.Size = new System.Drawing.Size(350, 15);
             this.frm2_label_text_ShowPathForEnvelops.TabIndex = 2;
             this.frm2_label_text_ShowPathForEnvelops.Text = "Укажите путь к папке с изображениями конвертов";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox1.Location = new System.Drawing.Point(33, 130);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(347, 20);
-            this.textBox1.TabIndex = 3;
             // 
             // checkBox1
             // 
@@ -176,12 +166,22 @@
             this.frm2_button_Save.UseVisualStyleBackColor = true;
             this.frm2_button_Save.Click += new System.EventHandler(this.frm2_button_Save_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBox1.Location = new System.Drawing.Point(33, 130);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(347, 20);
+            this.textBox1.TabIndex = 13;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(94)))), ((int)(((byte)(94)))));
             this.ClientSize = new System.Drawing.Size(651, 306);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.frm2_button_Save);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.checkBox3);
@@ -191,7 +191,6 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.frm2_label_text_ShowPathForEnvelops);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.frm2_label_text_Header);
@@ -209,7 +208,6 @@
         private System.Windows.Forms.Label frm2_label_text_Header;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label frm2_label_text_ShowPathForEnvelops;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.TextBox textBox2;
@@ -219,5 +217,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button frm2_button_Save;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

@@ -11,7 +11,7 @@ namespace Site_Maker_2
         private Form2 frm2;
 
         public void meth_Configuration()
-        {
+        {           
             frm2 = new Form2();
             frm2.ShowDialog();
         }

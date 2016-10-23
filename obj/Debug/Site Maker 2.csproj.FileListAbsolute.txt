@@ -10,3 +10,4 @@ D:\Visual Studio Projects\Site Maker 2\Site Maker 2\obj\Debug\Site Maker 2.pdb
 D:\Visual Studio Projects\Site Maker 2\Site Maker 2\obj\Debug\Interop.Accessibility.dll
 D:\Visual Studio Projects\Site Maker 2\Site Maker 2\obj\Debug\Site Maker 2.csproj.ResolveComReference.cache
 D:\Visual Studio Projects\Site Maker 2\Site Maker 2\obj\Debug\Site_Maker_2.Form2.resources
+D:\Visual Studio Projects\Site Maker 2\Site Maker 2\obj\Debug\Site_Maker_2.CodeEnvelopes.resources

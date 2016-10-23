@@ -61,6 +61,7 @@
             this.button_CreateCode.Text = "Создать код";
             this.button_CreateCode.UseVisualStyleBackColor = true;
             this.button_CreateCode.Visible = false;
+            this.button_CreateCode.Click += new System.EventHandler(this.button_CreateCode_Click);
             // 
             // button_chooseFile
             // 
@@ -240,6 +241,7 @@
             this.Controls.Add(this.button_CreateCode);
             this.Name = "Form1";
             this.Text = "Professional site creation tool";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel_allNew.ResumeLayout(false);
             this.panel_allNew.PerformLayout();

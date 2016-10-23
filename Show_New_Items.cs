@@ -31,7 +31,7 @@ namespace Site_Maker_2
             int dd = table.Rows.Count;
 
 
-            for (int i = table.Rows.Count - 5; i < table.Rows.Count; i++)
+            for (int i = table.Rows.Count - 8; i < table.Rows.Count; i++)
             {
                 string value = "";
                 for (int j = 0; j < table.Columns.Count; j++)
